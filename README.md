@@ -6,14 +6,6 @@
 
 ## 课程路线
 
-```mermaid
-flowchart LR
-    A[Lab 1: UML / 设计] --> B[Lab 2: 回调与文件操作]
-    B --> C[Lab 3: JDBC + DAO]
-    C --> D[Lab 4: Servlet/JSP]
-    D --> E[分组大作业: 学生/教师管理]
-```
-
 | 部分 | 主要问题 | 代码入口 |
 | --- | --- | --- |
 | Lab 1 | 用 UML 表达一个小系统的对象关系 | `labs/lab-01/Work1.uml` |
@@ -54,24 +46,6 @@ Student entity
 ## Lab 4：Servlet/JSP 学生管理
 
 Lab 4 是第一个真正有 Web 应用形状的实验。`LoginServlet` 接收登录请求，`LoginDao` 查询用户，`StudentServlet` 处理学生列表和增删改，JSP 页面负责表单与结果展示。登录状态通过 `HttpSession` 传递，勾选“记住我”时还会写 Cookie。
-
-```mermaid
-flowchart LR
-    Browser[Browser]
-    JSP[JSP pages]
-    Login[LoginServlet]
-    Student[StudentServlet]
-    DAO[LoginDao / StudentDao]
-    DB[(MySQL)]
-
-    Browser --> JSP
-    JSP --> Login
-    JSP --> Student
-    Login --> DAO
-    Student --> DAO
-    DAO --> DB
-    Login --> Session[HttpSession / Cookie]
-```
 
 这个实验最值得回看的地方，是一次请求会经过哪些边界：表单参数进入 Servlet，Servlet 判断会话，再调用 DAO，DAO 执行 SQL，最后 JSP 读取结果并渲染页面。它当然没有现代 Web 框架的路由、模板和依赖注入，但“请求—业务—数据—页面”的链路已经完整了。
 
