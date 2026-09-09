@@ -23,6 +23,7 @@ Java EE 课程实验与分组大作业归档，覆盖 Java 基础文件操作、
 | `labs/lab-04` | Servlet/JSP student management web application | Source and web resources included |
 | `group-project` | Team student/teacher management application | Team coursework source |
 | `docs/assignments` | Historical experiment and project task descriptions | Archive reference only |
+| `docs/reports` | Individual lab reports and team project report | Historical coursework record |
 
 ## Features
 
@@ -56,6 +57,7 @@ Java EE 课程实验与分组大作业归档，覆盖 Java 基础文件操作、
  ├── src/java/                # Team Java source
  └── src/webapp/              # Team Web resources
  docs/assignments/            # Historical task descriptions
+docs/reports/               # Historical lab and team reports
 ```
 
 ## Environment
@@ -100,7 +102,7 @@ JAVAEE_DB_PASSWORD=<local-password>
 
 ## Historical Course Materials
 
-`docs/assignments` 中的任务文件来自过往课程，仅用于个人学习回顾、课程内容整理和历史归档，不用于当前课程提交、考试或任何形式的抄袭。
+`docs/assignments` 和 `docs/reports` 中的文件来自过往课程，仅用于个人学习回顾、课程内容整理和历史归档，不用于当前课程提交、考试或任何形式的抄袭。报告中的课程身份信息和小组协作信息属于当时的历史记录。
 
 ## Team Coursework
 
@@ -111,5 +113,5 @@ JAVAEE_DB_PASSWORD=<local-password>
 - 代码使用旧版 JDBC 驱动、Servlet/JSP 和 Eclipse 工程结构。
 - 部分 SQL 使用字符串拼接，存在 SQL 注入风险，不应直接用于生产环境。
 - 原始代码中的 Cookie 密码保存和明文数据库认证逻辑仅作为历史实现保留。
-- 当前仓库未包含个人提交版实验报告，以避免把个人身份信息和提交格式带入公开代码仓库。
+- `docs/reports` 保留实验报告和分组项目报告，作为课程实现的实验记录。
 - 运行环境和数据库 schema 需要根据每个实验的历史要求自行准备。
